@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "devDependencies": {
+    "parcel": "2.7.0"
+  },
+  "scripts": {
+    "build": "spago build",
+    "test": "spago test",
+    "serve": "parcel dev/index.html --open",
+    "build-prod": "rm -rf prod && mkdir -p prod && cp dev/index.html prod/ && cp dev/bootstrap.min.css prod/ && env PRODUCTION=True spago bundle-app --to prod/index.js --minify && parcel build prod/index.html"
+  }
+}

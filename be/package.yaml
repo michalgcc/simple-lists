@@ -1,0 +1,63 @@
+# Please run update-deps.sh to generate a new cabal file and default.nix.
+# Hpack format
+name: simple-lists
+version: 0.1.0.0
+license: MIT
+license-file: LICENSE
+category: Web
+extra-doc-files:
+  - README.md
+
+dependencies:
+  - aeson
+  - base
+  - beam-core
+  - beam-sqlite
+  - bytestring
+  - directory
+  - dotenv
+  - mr-env
+  - servant
+  - servant-multipart
+  - servant-server
+  - servant-swagger
+  - servant-swagger-ui
+  - text
+  - wai
+  - wai-cors
+  - warp
+  - sqlite-simple
+  - transformers
+
+default-extensions:
+  - DeriveGeneric
+  - OverloadedStrings
+  - OverloadedRecordDot
+  - DuplicateRecordFields
+  - StrictData
+
+library:
+  source-dirs: src
+executables:
+  simple-lists-exe:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+      - -Wall
+      - -O2
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - simple-lists
+tests:
+  simple-lists-test:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - simple-lists
+      - hspec

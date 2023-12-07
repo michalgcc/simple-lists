@@ -1,0 +1,126 @@
+cabal-version: 1.18
+
+-- This file has been generated from package.yaml by hpack version 0.35.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           simple-lists
+version:        0.1.0.0
+category:       Web
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-doc-files:
+    README.md
+
+library
+  exposed-modules:
+      Api
+      Db
+      Lib
+      Shared
+  other-modules:
+      Paths_simple_lists
+  hs-source-dirs:
+      src
+  default-extensions:
+      DeriveGeneric
+      OverloadedStrings
+      OverloadedRecordDot
+      DuplicateRecordFields
+      StrictData
+  build-depends:
+      aeson
+    , base
+    , beam-core
+    , beam-sqlite
+    , bytestring
+    , directory
+    , dotenv
+    , mr-env
+    , servant
+    , servant-multipart
+    , servant-server
+    , servant-swagger
+    , servant-swagger-ui
+    , sqlite-simple
+    , text
+    , transformers
+    , wai
+    , wai-cors
+    , warp
+  default-language: Haskell2010
+
+executable simple-lists-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_simple_lists
+  hs-source-dirs:
+      app
+  default-extensions:
+      DeriveGeneric
+      OverloadedStrings
+      OverloadedRecordDot
+      DuplicateRecordFields
+      StrictData
+  ghc-options: -Wall -O2 -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base
+    , beam-core
+    , beam-sqlite
+    , bytestring
+    , directory
+    , dotenv
+    , mr-env
+    , servant
+    , servant-multipart
+    , servant-server
+    , servant-swagger
+    , servant-swagger-ui
+    , simple-lists
+    , sqlite-simple
+    , text
+    , transformers
+    , wai
+    , wai-cors
+    , warp
+  default-language: Haskell2010
+
+test-suite simple-lists-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_simple_lists
+  hs-source-dirs:
+      test
+  default-extensions:
+      DeriveGeneric
+      OverloadedStrings
+      OverloadedRecordDot
+      DuplicateRecordFields
+      StrictData
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base
+    , beam-core
+    , beam-sqlite
+    , bytestring
+    , directory
+    , dotenv
+    , hspec
+    , mr-env
+    , servant
+    , servant-multipart
+    , servant-server
+    , servant-swagger
+    , servant-swagger-ui
+    , simple-lists
+    , sqlite-simple
+    , text
+    , transformers
+    , wai
+    , wai-cors
+    , warp
+  default-language: Haskell2010

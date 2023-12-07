@@ -1,0 +1,27 @@
+[changelog]
+path = "CHANGELOG.md"
+template = "remote"
+remote = "github.com"
+repository = "simple-lists"
+owner = "michalgcc"
+authors = [
+  { signature = "Michal Gasz", username = "michalgcc" }
+]
+
+[git_hooks.pre-commit]
+script = """#!/usr/bin/env bash
+set -e
+pushd be
+./format_code.sh
+popd
+pushd fe
+./format_code.sh
+popd
+"""
+
+[git_hooks.commit-msg]
+script = """#!/usr/bin/env bash
+set -e
+cog verify --file $1
+cog check
+"""

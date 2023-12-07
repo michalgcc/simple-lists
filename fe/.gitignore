@@ -1,0 +1,13 @@
+output
+generated-docs
+bower_components
+node_modules/
+.parcel-cache/
+
+dist/
+prod/
+.psc-ide-port/
+.psci_modules/
+.direnv/
+.spago/
+.psc-ide-port
