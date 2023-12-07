@@ -4,4 +4,4 @@ set -e
 git checkout main
 git pull --ff-only
 cog bump --auto
-git push --follow-tags
+git push origin $(cog get-version)
