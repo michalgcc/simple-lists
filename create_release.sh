@@ -1,3 +1,7 @@
-cog bump --auto
+#!/usr/bin/env bash
+set -e
 
-echo "Don't forget to push with tags git push --follow-tags"
+git checkout main
+git pull --ff-only
+cog bump --auto
+git push --follow-tags
