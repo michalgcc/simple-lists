@@ -1,3 +1,13 @@
+pre_bump_hooks = [
+    "echo Current: {{latest}}",
+    "echo Next: {{version}}",
+    "echo Patching be",
+    "cd be && sed -i 's/version: {{latest}}/version: {{version}}/g' package.yaml && hpack",
+    "echo Patching fe",
+    "cd fe && sed -i 's/index.js?v={{latest}}/index.js?v={{version}}/g' ./dev/index.html",
+    "cd fe && sed -i 's/version = \"{{latest}}\"/version = \"{{version}}\"/g' ./src/Main.purs"
+]
+
 [changelog]
 path = "CHANGELOG.md"
 template = "remote"

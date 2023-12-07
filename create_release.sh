@@ -1,2 +1,3 @@
 cog bump --auto
-cog changelog > CHANGELOG.md
+
+echo "Don't forget to push with tags git push --follow-tags"
