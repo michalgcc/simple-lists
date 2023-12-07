@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.2.0](https://github.com/michalgcc/simple-lists/compare/0.1.0..0.2.0) - 2023-12-07
+#### Build system
+- Adjust release script - ([29a58a8](https://github.com/michalgcc/simple-lists/commit/29a58a8e56045c4956b6dfdc628e35e61c8ebfc7)) - [@michalgcc](https://github.com/michalgcc)
+#### Features
+- Add version bump to FE and BE - ([711ad76](https://github.com/michalgcc/simple-lists/commit/711ad764e8333c0ad9b7ea3f2171951b429f80d2)) - [@michalgcc](https://github.com/michalgcc)
+
+- - -
+
 ## [0.1.0](https://github.com/michalgcc/simple-lists/compare/ab03cd84ae3175a80518fc50e92c86c241b5e597..0.1.0) - 2023-12-07
 
 - - -
