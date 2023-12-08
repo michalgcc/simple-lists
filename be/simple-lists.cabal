@@ -16,8 +16,12 @@ extra-doc-files:
 library
   exposed-modules:
       Api
-      Db
+      Domain
+      Handler
       Lib
+      Repository.Data
+      Repository.Db
+      Repository.Ops
       Shared
   other-modules:
       Paths_simple_lists
@@ -25,9 +29,9 @@ library
       src
   default-extensions:
       DeriveGeneric
-      OverloadedStrings
-      OverloadedRecordDot
       DuplicateRecordFields
+      OverloadedRecordDot
+      OverloadedStrings
       StrictData
   build-depends:
       aeson
@@ -43,10 +47,13 @@ library
     , servant-server
     , servant-swagger
     , servant-swagger-ui
+    , snowflake
     , sqlite-simple
     , text
+    , time
     , transformers
     , wai
+    , wai-app-static
     , wai-cors
     , warp
   default-language: Haskell2010
@@ -59,9 +66,9 @@ executable simple-lists-exe
       app
   default-extensions:
       DeriveGeneric
-      OverloadedStrings
-      OverloadedRecordDot
       DuplicateRecordFields
+      OverloadedRecordDot
+      OverloadedStrings
       StrictData
   ghc-options: -Wall -O2 -threaded -rtsopts -with-rtsopts=-N
   build-depends:
@@ -79,10 +86,13 @@ executable simple-lists-exe
     , servant-swagger
     , servant-swagger-ui
     , simple-lists
+    , snowflake
     , sqlite-simple
     , text
+    , time
     , transformers
     , wai
+    , wai-app-static
     , wai-cors
     , warp
   default-language: Haskell2010
@@ -96,9 +106,9 @@ test-suite simple-lists-test
       test
   default-extensions:
       DeriveGeneric
-      OverloadedStrings
-      OverloadedRecordDot
       DuplicateRecordFields
+      OverloadedRecordDot
+      OverloadedStrings
       StrictData
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
@@ -117,10 +127,13 @@ test-suite simple-lists-test
     , servant-swagger
     , servant-swagger-ui
     , simple-lists
+    , snowflake
     , sqlite-simple
     , text
+    , time
     , transformers
     , wai
+    , wai-app-static
     , wai-cors
     , warp
   default-language: Haskell2010

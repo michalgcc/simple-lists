@@ -22,18 +22,21 @@ dependencies:
   - servant-server
   - servant-swagger
   - servant-swagger-ui
+  - snowflake
+  - sqlite-simple
   - text
+  - time
+  - transformers
   - wai
+  - wai-app-static
   - wai-cors
   - warp
-  - sqlite-simple
-  - transformers
 
 default-extensions:
   - DeriveGeneric
-  - OverloadedStrings
-  - OverloadedRecordDot
   - DuplicateRecordFields
+  - OverloadedRecordDot
+  - OverloadedStrings
   - StrictData
 
 library:

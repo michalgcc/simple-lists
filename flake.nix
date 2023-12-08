@@ -76,6 +76,7 @@
 
           shellHook = ''
             yes | cog install-hook --all
+            pushd fe && npm install && popd
           '';
         };
       });

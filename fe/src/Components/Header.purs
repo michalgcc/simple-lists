@@ -25,7 +25,7 @@ headerMenu =
       routerLink route =
         let
           label = case _ of
-            Home -> "Home"
+            Home _ -> "Home"
             About -> "About"
             _ -> "Unknown"
         in
@@ -38,8 +38,10 @@ headerMenu =
             ]
     Hooks.pure do
       HH.header []
-        [ HH.nav []
-            [ HH.ul []
-                (routerLink <$> [ Home, About ])
-            ]
+        [
+        -- TODO refactor, for now it's not necessary
+        -- HH.nav []
+        --   [ HH.ul []
+        --       (routerLink <$> [ Home Nothing, About ])
+        --   ]
         ]

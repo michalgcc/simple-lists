@@ -17,6 +17,7 @@
   , "prelude"
   , "routing-duplex"
   , "tuples"
+  , "web-html"
   , "web-uievents"
   ]
 , packages = ./packages.dhall

@@ -32,5 +32,5 @@ app =
   routerView = case _ of
     Nothing -> HH.text "404"
     Just route -> case route of
-      Home -> HH.slot_ (Proxy :: Proxy "home") unit homeView {}
+      Home listId -> HH.slot_ (Proxy :: Proxy "home") unit (homeView listId) {}
       About -> HH.slot_ (Proxy :: Proxy "about") unit aboutView {}

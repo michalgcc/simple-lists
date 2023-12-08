@@ -7,14 +7,17 @@ BEGIN;
 	PRAGMA foreign_keys = ON;
 
 	CREATE TABLE entries (
-		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		text TEXT,
-		is_done BOOLEAN
+		id INTEGER PRIMARY KEY,
+		text TEXT NOT NULL,
+		is_done BOOLEAN NOT NULL,
+		updated_at TIMESTAMP WITH TIMEZONE NOT NULL
 	);
 
-	INSERT INTO Entries (text, is_done) VALUES ('Example 1', 0);
-	INSERT INTO Entries (text, is_done) VALUES ('Example 2', 1);
-	INSERT INTO Entries (text, is_done) VALUES ('Example 3', 0);
+	CREATE INDEX ix_entries_updated_at ON entries (updated_at);
+
+	INSERT INTO Entries (id, text, is_done, updated_at) VALUES (5059536251242152065, 'Example 1', 0, '2023-12-08T14:55:20.044287013Z');
+	INSERT INTO Entries (id, text, is_done, updated_at) VALUES (5059536251242152193, 'Example 2', 1, '2023-12-09T14:55:20.044287013Z');
+	INSERT INTO Entries (id, text, is_done, updated_at) VALUES (5059536251242152321, 'Example 3', 0, '2023-12-10T14:55:20.044287013Z');
 
 COMMIT;
 
@@ -22,6 +25,5 @@ COMMIT;
 
 BEGIN;
 
-	DROP TABLE entries;
 
 COMMIT;
