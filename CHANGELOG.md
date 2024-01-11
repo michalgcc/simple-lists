@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.3.0](https://github.com/michalgcc/simple-lists/compare/0.2.0..0.3.0) - 2024-01-11
+#### Bug Fixes
+- Push current tag automatically when creating a release - ([357638d](https://github.com/michalgcc/simple-lists/commit/357638d17c0765ea399d78748916125c65a262a6)) - [@michalgcc](https://github.com/michalgcc)
+#### Features
+- Add separate lists - ([4045e1d](https://github.com/michalgcc/simple-lists/commit/4045e1d99390822570c53127293be1acbdbb5bfa)) - [@michalgcc](https://github.com/michalgcc)
+
+- - -
+
 ## [0.2.0](https://github.com/michalgcc/simple-lists/compare/0.1.0..0.2.0) - 2023-12-07
 #### Build system
 - Adjust release script - ([29a58a8](https://github.com/michalgcc/simple-lists/commit/29a58a8e56045c4956b6dfdc628e35e61c8ebfc7)) - [@michalgcc](https://github.com/michalgcc)
