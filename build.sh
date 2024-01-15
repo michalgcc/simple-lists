@@ -17,4 +17,3 @@ cp ./db/migrations/* ../prod/migrations
 popd
 
 nix build path://$(pwd)/.#dockerContainer
-podman load < result

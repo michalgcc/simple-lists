@@ -1,4 +1,5 @@
 #!/bin/sh
+# Used as a starting point in OCI container
 mkdir -p /tmp
 
 if [ -n "$DB_CONN_STRING" ] && [ ! -f "$DB_CONN_STRING" ]; then
